@@ -4,7 +4,7 @@
 
 ---
 
-## 📁 โครงสร้างโฟลเดอร์สำหรับทำใบงาน (Workspace Setup)
+## โครงสร้างโฟลเดอร์สำหรับทำใบงาน (Workspace Setup)
 
 - `Labs/Lab5-1-Wi-Fi-Phase1/` - โค้ดและรายงานการทดลอง ใบงานที่ 5.1 (Wi-Fi Scan Phase)
 - `Labs/Lab5-2-Wi-Fi-Phase2/` - โค้ดและรายงานการทดลอง ใบงานที่ 5.2 (Wi-Fi Connection Phase)
@@ -13,7 +13,7 @@
 
 ---
 
-## 📝 ภาพรวมใบงานที่ 5.1 - 5.4
+## ภาพรวมใบงานที่ 5.1 - 5.4
 
 ### 1. ใบงานที่ 5.1: Wi-Fi Connection and Scanning (`Labs/Lab5-1-Wi-Fi-Phase1`)
 - **วัตถุประสงค์:** ทดสอบการสแกนหาสัญญาณ Wi-Fi (General Scan, Channel-Specific Scan, Targeted SSID Scan)
