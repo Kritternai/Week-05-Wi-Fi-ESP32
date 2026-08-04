@@ -1,3 +1,9 @@
+# Secrets & Credentials
+wifi_credentials.h
+**/wifi_credentials.h
+*.env
+.env
+
 # ESP-IDF build output and temporary files
 build/
 **/build/

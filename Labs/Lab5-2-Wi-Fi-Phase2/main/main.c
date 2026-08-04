@@ -19,8 +19,12 @@ static EventGroupHandle_t s_wifi_event_group;
 #define WIFI_FAIL_BIT BIT1
 
 // Configurable target Wi-Fi credentials for successful test
+#if __has_include("wifi_credentials.h")
+#include "wifi_credentials.h"
+#else
 #define EXAMPLE_ESP_WIFI_SSID "MY_SSID"
 #define EXAMPLE_ESP_WIFI_PASS "MY_PASSWORD"
+#endif
 
 // Convert wifi_reason_code_t to readable string
 static const char *get_disconnect_reason_name(uint8_t reason) {
@@ -31,24 +35,24 @@ static const char *get_disconnect_reason_name(uint8_t reason) {
     return "WIFI_REASON_AUTH_EXPIRE (2)";
   case WIFI_REASON_AUTH_LEAVE:
     return "WIFI_REASON_AUTH_LEAVE (3)";
-  case WIFI_REASON_ASSOC_EXPIRE:
+  case 4:
     return "WIFI_REASON_ASSOC_EXPIRE (4)";
-  case WIFI_REASON_ASSOC_FAIL:
-    return "WIFI_REASON_ASSOC_FAIL (203)";
-  case WIFI_REASON_NOT_AUTHED:
+  case 6:
     return "WIFI_REASON_NOT_AUTHED (6)";
   case WIFI_REASON_HANDSHAKE_TIMEOUT:
     return "WIFI_REASON_HANDSHAKE_TIMEOUT (15)";
+  case WIFI_REASON_BEACON_TIMEOUT:
+    return "WIFI_REASON_BEACON_TIMEOUT (200)";
   case WIFI_REASON_NO_AP_FOUND:
     return "WIFI_REASON_NO_AP_FOUND (201)";
   case WIFI_REASON_AUTH_FAIL:
     return "WIFI_REASON_AUTH_FAIL (202)";
+  case WIFI_REASON_ASSOC_FAIL:
+    return "WIFI_REASON_ASSOC_FAIL (203)";
   case WIFI_REASON_4WAY_HANDSHAKE_TIMEOUT:
     return "WIFI_REASON_4WAY_HANDSHAKE_TIMEOUT (204)";
   case WIFI_REASON_CONNECTION_FAIL:
     return "WIFI_REASON_CONNECTION_FAIL (208)";
-  case WIFI_REASON_BEACON_TIMEOUT:
-    return "WIFI_REASON_BEACON_TIMEOUT (200)";
   default:
     return "OTHER_DISCONNECT_REASON";
   }
