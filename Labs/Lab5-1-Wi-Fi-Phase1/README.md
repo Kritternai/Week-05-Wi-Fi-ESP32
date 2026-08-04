@@ -48,6 +48,10 @@ idf.py -p <PORT> flash monitor
 | 9 | KMITL-WIFI | 78:17:BE:C0:66:21 | -82 dBm | 1 | OPEN (No Password) |
 | 10 | KMITL-IoT | 78:17:BE:C0:66:22 | -82 dBm | 1 | WPA2_PSK |
 
+### 3. ภาพถ่ายผลการรันโปรแกรมบน Serial Console
+
+![Serial Console Forensic Log](../../Images/1termsnap.png)
+
 ---
 
 ## ตอบคำถามท้ายการทดลอง (Post-Lab Questions)

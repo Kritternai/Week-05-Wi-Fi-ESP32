@@ -462,6 +462,10 @@ void app_main(void) {
 | 4 | KMITL-IoT | 78:17:BE:C0:7D:A2 | -50 dBm | 1 | WPA2_PSK |
 | 5 | KMITL-IoT | 78:17:BE:C0:72:62 | -78 dBm | 11 | WPA2_PSK |
 
+### 6.3 ภาพถ่ายผลการรันโปรแกรมบน Serial Console
+
+![Serial Console Forensic Log](Images/1termsnap.png)
+
 ---
 
 ## 7. คำถามท้ายการทดลอง (Post-Lab Questions)
