@@ -17,8 +17,14 @@ static EventGroupHandle_t s_wifi_event_group;
 #define WIFI_CONNECTED_BIT BIT0
 #define WIFI_FAIL_BIT      BIT1
 
-#define TARGET_WIFI_SSID   "S24 Ultra Koson"
-#define TARGET_WIFI_PASS   "1234567890"
+#if __has_include("wifi_credentials.h")
+#include "wifi_credentials.h"
+#define TARGET_WIFI_SSID EXAMPLE_ESP_WIFI_SSID
+#define TARGET_WIFI_PASS EXAMPLE_ESP_WIFI_PASS
+#else
+#define TARGET_WIFI_SSID "MY_SSID"
+#define TARGET_WIFI_PASS "12345678"
+#endif
 
 static const char *get_disconnect_reason_info(uint8_t reason) {
   switch (reason) {
@@ -28,7 +34,7 @@ static const char *get_disconnect_reason_info(uint8_t reason) {
     return "WIFI_REASON_AUTH_EXPIRE (2)";
   case WIFI_REASON_AUTH_FAIL:
     return "WIFI_REASON_AUTH_FAIL (1/202)";
-  case WIFI_REASON_ASSOC_EXPIRE:
+  case 4:
     return "WIFI_REASON_ASSOC_EXPIRE (4)";
   case WIFI_REASON_ASSOC_FAIL:
     return "WIFI_REASON_ASSOC_FAIL (3/203)";
