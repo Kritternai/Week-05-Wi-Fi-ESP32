@@ -1,1 +1,42 @@
-.obsidian/**
+# ESP-IDF build output and temporary files
+build/
+**/build/
+sdkconfig
+sdkconfig.old
+sdkconfig.ci
+managed_components/
+dependencies.lock
+
+# PlatformIO build & local configuration files
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# IDE & Editor files
+.vscode/*.log
+.vscode/compile_commands.json
+.vscode/.browse.c_cpp.db*
+.idea/
+*.swp
+*~
+*.bak
+
+# Obsidian
+.obsidian/
+
+# Compiled binary and object files
+*.o
+*.elf
+*.bin
+*.map
+*.hex
+*.d
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
